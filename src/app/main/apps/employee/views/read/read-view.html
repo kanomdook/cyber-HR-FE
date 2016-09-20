@@ -1,40 +1,40 @@
 <!-- MAIL CONTENT -->
 <div class="mail-content">
     <div class="info" layout="row" layout-align="space-between start">
-        <div layout="column" layout-align="start start">
+        <div layout="column" layout-align="start start" flex>
             <div layout="row" layout-align="start start">
                 <div>
                     <img ng-if="vm.selectedMail.from.avatar" alt="{{vm.selectedMail.from.name}}" ng-src="{{vm.selectedMail.from.avatar}}" class="avatar" />
                     <div class="avatar" ms-random-class="colors">
-                        AA
+                        A
                     </div>
                 </div>
                 <div layout="column" layout-align="start start">
                     <div class="name">
-                        Apple Apple
+                        {{_selectedemp.PersonalInfo.FirstNameEN}} {{_selectedemp.PersonalInfo.LastNameEN}} 
                     </div>
                     <div class="to" layout="row" layout-align="start center">
-                        <div class="to-text" translate="MAIL.INFO.TO">to</div>
-                        <div>CC</div>
+                        
+                        <div>{{_selectedemp.PersonalInfo.Email}} </div>
                     </div>
                 </div>
             </div>
-            <a class="toggle-details md-accent-color" ng-hide="vm.selectedMailShowDetails" ng-click="vm.selectedMailShowDetails = !vm.selectedMailShowDetails" translate="MAIL.SHOW_DETAILS">
-                Show Details
-            </a>
-            <a class="toggle-details md-accent-color" ng-show="vm.selectedMailShowDetails" ng-click="vm.selectedMailShowDetails = !vm.selectedMailShowDetails" translate="MAIL.HIDE_DETAILS">
-                Hide Details
-            </a>
-            <div ng-show="vm.selectedMailShowDetails" class="details" layout="row" layout-align="start start">
+            
+            <div  layout="row" layout-align="start start">
                 <div layout="column">
-                    <span class="title" translate="MAIL.DETAILS.FROM">From:</span>
-                    <span class="title" translate="MAIL.DETAILS.TO">To:</span>
-                    <span class="title" translate="MAIL.DETAILS.DATE">Date:</span>
+                    <span class="title" translate="Position :"></span>
+                    <span class="title" translate="Start Date :"></span>
                 </div>
                 <div layout="column">
-                    <span class="detail">kanung.2535@gmail.com</span>
-                    <span class="detail">Apple@gmail.com</span>
-                    <span class="detail">20/09/2015</span>
+                    <span class="detail">{{_selectedemp.PersonalInfo.Position}}</span>
+                    <span class="detail">{{_selectedemp.RegardInfo.StartDateRI | date:"dd/MM/yyyy"}}</span>
+                </div>
+
+                <div layout="column">
+                    <span class="title" translate="Address :"></span>
+                </div>
+                <div layout="column">
+                    <span class="detail">{{_selectedemp.PersonalInfo.PresentAddress}}</span>
                 </div>
             </div>
         </div>
@@ -89,7 +89,7 @@
             </md-menu-content>
         </md-menu>
     </div>
-    <!-- <div ng-bind-html="vm.selectedMail.message"></div> -->
+    <!-- include component -->
     <div ng-include="'app/main/apps/employee/views/read/PI/index.html'"></div>
     <div ng-include="'app/main/apps/employee/views/read/FI/index.html'"></div>
     <div ng-include="'app/main/apps/employee/views/read/EI/index.html'"></div>
@@ -99,6 +99,7 @@
     <div ng-include="'app/main/apps/employee/views/read/OI/index.html'"></div>
     <div ng-include="'app/main/apps/employee/views/read/RI/index.html'"></div>
     <div ng-include="'app/main/apps/employee/views/read/CI/index.html'"></div>
+    <!-- // include component -->
 </div>
 <div ng-if="vm.selectedMail.attachments" class="attachments">
     <div class="title">
