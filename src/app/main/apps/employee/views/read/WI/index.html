@@ -1,11 +1,6 @@
 <div>WorkExperienceInfo Info</div>
 <div id="WI" class="center" layout="column" flex>
     <div>
-        <md-button style="float:right;position:right;" class="md-fab md-warn" ng-click="">
-            <md-icon md-font-icon="icon-plus"></md-icon>
-        </md-button>
-    </div>
-    <div>
     	<table class="simple list-view">
          <thead>
             <tr >
@@ -19,7 +14,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="WEI in WEIS">           
+            <tr ng-repeat="WEI in _selectedemp.WorkExperienceInfo">           
 
                 <td style="text-align: center;">{{WEI.CompanyWI}}</td>
                 <td style="text-align: center;">{{WEI.DateFromeWI}}</td>
