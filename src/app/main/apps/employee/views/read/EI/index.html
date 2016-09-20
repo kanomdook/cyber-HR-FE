@@ -19,7 +19,7 @@
             <td >{{edu.EducationLevelEI}}</td>
             <td hide show-gt-sm>{{edu.InstitutionEI}}</td>
             <td hide-xs>{{edu.MajorEI}}</td>
-            <td hide-xs>{{edu.DateFromEI + " - "  + edu.DateToEI}}</td>
+            <td hide-xs>{{edu.DateFromEI | date:"dd/MM/yyyy"}} - {{edu.DateToEI | date:"dd/MM/yyyy"}}</td>
          
         </tr>
 
