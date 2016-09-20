@@ -1,1 +1,23 @@
-<div>Personal Info</div>
+<div class="center" layout="column" flex>
+<table class="simple list-view">
+    <thead>
+        <tr>
+            <th></th>
+            <th translate="">Language</th>
+            <th translate="">Speaking</th>
+            <th translate="">Writing</th>
+            <th translate="">Reading</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr ng-repeat="lag in _selectedemp.languageInfo">
+            <td></td>
+            <td>{{lag.LanguageTypeLI}}</td>
+            <td>{{lag.SpeakingLI}}</td>
+            <td>{{lag.WritingLI}}</td>
+            <td>{{lag.ReadingLI}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>
