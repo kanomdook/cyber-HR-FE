@@ -1,1 +1,21 @@
-<div>Personal Info</div>
+<table class="simple list-view">
+    <thead>
+        <tr>
+            <th></th>
+            <th>First Name</th>
+            <th hide show-gt-sm>Last Name</th>
+            <th hide-xs>Related</th>
+            <th hide-gt-md></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="Fam in _selectedemp.FamilyInfo">
+            <td class="file-icon">
+                <md-icon md-font-icon="icon-account-multiple"></md-icon>
+            </td>
+            <td>{{Fam.FirstNameFI}}</td>
+            <td hide show-gt-sm>{{Fam.LastNameFI}}</td>
+            <td hide-xs>{{Fam.RelatedFI}}</td>
+        </tr>
+    </tbody>
+</table>

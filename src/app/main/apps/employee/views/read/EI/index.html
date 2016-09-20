@@ -1,1 +1,29 @@
-<div>Personal Info</div>
+<!-- LIST VIEW -->
+<table class="simple list-view">
+    <thead>
+        <tr>
+            <th></th>
+            <th >Education Level</th>
+            <th hide show-gt-sm >Institution</th>
+            <th hide-xs >Major</th>
+            <th hide-xs >Date</th>
+            <th hide-gt-md></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr ng-repeat="edu in _selectedemp.EducationInfo">
+            <td class="file-icon">
+                <md-icon md-font-icon="icon-folder"></md-icon>
+            </td>
+            <td >{{edu.EducationLevelEI}}</td>
+            <td hide show-gt-sm>{{edu.InstitutionEI}}</td>
+            <td hide-xs>{{edu.MajorEI}}</td>
+            <td hide-xs>{{edu.DateFromEI + " - "  + edu.DateToEI}}</td>
+         
+        </tr>
+
+       
+    </tbody>
+</table>
+<!-- / LIST VIEW -->
