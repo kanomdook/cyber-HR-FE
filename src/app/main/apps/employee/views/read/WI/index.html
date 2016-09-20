@@ -1,1 +1,36 @@
-<div>Personal Info</div>
+<div>WorkExperienceInfo Info</div>
+<div id="WI" class="center" layout="column" flex>
+    <div>
+        <md-button style="float:right;position:right;" class="md-fab md-warn" ng-click="">
+            <md-icon md-font-icon="icon-plus"></md-icon>
+        </md-button>
+    </div>
+    <div>
+    	<table class="simple list-view">
+         <thead>
+            <tr >
+                <th style="text-align: center;">CompanyWI</th>
+                <th style="text-align: center;">DateFrome</th>
+                <th style="text-align: center;">DateTo</th>
+                <th style="text-align: center;">Position</th>
+                <th style="text-align: center;">JobDecision</th>
+                <th style="text-align: center;">Salary</th>
+                <th style="text-align: center;">Reason</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="WEI in WEIS">           
+
+                <td style="text-align: center;">{{WEI.CompanyWI}}</td>
+                <td style="text-align: center;">{{WEI.DateFromeWI}}</td>
+                <td style="text-align: center;">{{WEI.DateToWI}}</td>
+                <td style="text-align: center;">{{WEI.PositionWI}}</td>
+                <td style="text-align: center;">{{WEI.JobDescWI}}</td>
+                <td style="text-align: center;">{{WEI.SalaryWI}}</td>
+                <td style="text-align: center;">{{WEI.ReasonWI}}</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    
+</div>

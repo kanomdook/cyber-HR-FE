@@ -1,0 +1,30 @@
+#WI {
+    .add-file-button {
+        position: absolute;
+        bottom: -32px;
+        /*left: 160px;*/
+        float: right;
+    }
+    .file-icon {
+        .icon-folder {
+            &:before {
+                color: #FFB300;
+            }
+        }
+        .icon-document {
+            &:before {
+                color: #1565C0;
+            }
+        }
+        .icon-spreadsheet {
+            &:before {
+                color: #4CAF50;
+            }
+        }
+    }
+    .button {
+        float: right !important;
+
+    }
+    
+}

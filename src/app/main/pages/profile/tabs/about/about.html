@@ -1,53 +1,105 @@
 <div layout="row" layout-wrap>
-
     <div class="about" layout="column" flex="100" flex-gt-sm="50" flex-gt-md="65">
         <div class="profile-box info-box general md-whiteframe-1dp" layout="column">
             <header class="md-accent-bg">
-                <div class="title" translate="PROFILE.GENERAL_INFORMATION">General Information</div>
+                <div class="title">Other Information</div>
             </header>
-
-            <div class="content">
+            <div class="content" layout="column">
+                <div layout="row"></div>
                 <div class="info-line">
-                    <div class="title" translate="PROFILE.GENDER">Gender</div>
-                    <div class="info">{{vm.about.general.gender}}</div>
+                    <div class="title">WorkCountry</div>
+                    <div class="info">{{OtherInfo.WorkCountryOI}}</div>
+                </div>
+                <div class="info-line">
+                    <div class="title">WorkCountryDesc</div>
+                    <div class="info">{{OtherInfo.WorkCountryDescOI}}</div>
                 </div>
 
+
+                <div layout="row">
+                <div class="info-line" flex="50">
+                    <div class="title">FirstName</div>
+                    <div class="info">{{OtherInfo.FirtNameOI}}</div>
+                </div>
+                <div class="info-line" flex="50">
+                    <div class="title">LastName</div>
+                    <div class="info">{{OtherInfo.LastNameOI}}</div>
+                </div>
+                </div>
                 <div class="info-line">
-                    <div class="title" translate="PROFILE.BIRTHDAY">Birthday</div>
-                    <div class="info">{{vm.about.general.birthday}}</div>
+                    <div class="title">Related</div>
+                    <div class="info">{{OtherInfo.RelatedOI}}</div>
+                </div>
+                <div class="info-line">
+                    <div class="title">Address</div>
+                    <div class="info">{{OtherInfo.AddressOI}}</div>
+                </div>
+                <div class="info-line">
+                    <div class="title">Tel</div>
+                    <div class="info">{{OtherInfo.TelOI}}</div>
+                </div>
+                <div class="info-line">
+                    <div class="title">Source</div>
+                    <div class="info">{{OtherInfo.SourceInfoOI}}</div>
+                </div>
+                <div class="info-line">
+                    <div class="title">Contagious</div>
+                    <div class="info">{{OtherInfo.ContagiousFlagOI}}</div>
+                </div>
+                <div class="info-line">
+                    <div class="title">ContagiousDesc</div>
+                    <div class="info">{{OtherInfo.ContagiousDescOI}}</div>
+                </div>
+                <div layout="row">
+                <div class="info-line" flex="50">
+                    <div class="title">FirstNameWorkRela</div>
+                    <div class="info">{{OtherInfo.FirstNameWorkRelativeOI}}</div>
+                </div>
+                <div class="info-line" flex="50">
+                    <div class="title">LastNameWorkRela</div>
+                    <div class="info">{{OtherInfo.LastNameWorkRelativeOI}}</div>
+                </div>
+                </div>
+                <div class="info-line">
+                    <div class="title">YoureSelf</div>
+                    <div class="info">{{OtherInfo.IntroduceYoureSelfOI}}</div>
                 </div>
 
-                <div class="info-line">
+
+
+
+
+
+
+
+
+
+                <!-- <div class="info-line">
                     <div class="title" translate="PROFILE.LOCATIONS">Locations</div>
                     <div class="info location" ng-repeat="location in vm.about.general.locations">
                         <span>{{location}}</span>
                         <md-icon md-font-icon="icon-map-marker" class="s16"></md-icon>
                     </div>
-                </div>
-
-                <div class="info-line">
+                </div> -->
+                <!-- <div class="info-line">
                     <div class="title" translate="PROFILE.ABOUT_ME">About Me</div>
                     <div class="info">{{vm.about.general.about}}</div>
-                </div>
+                </div> -->
             </div>
         </div>
-
         <div class="profile-box info-box work md-whiteframe-1dp" layout="column">
             <header class="md-accent-bg">
                 <div class="title" translate="PROFILE.WORK">Work</div>
             </header>
-
             <div class="content">
                 <div class="info-line">
                     <div class="title" translate="PROFILE.OCCUPATION">Occupation</div>
                     <div class="info">{{vm.about.work.occupation}}</div>
                 </div>
-
                 <div class="info-line">
                     <div class="title" translate="PROFILE.SKILLS">Skills</div>
                     <div class="info">{{vm.about.work.skills}}</div>
                 </div>
-
                 <div class="info-line">
                     <div class="title" translate="PROFILE.JOBS">Jobs</div>
                     <table class="info jobs">
@@ -59,7 +111,6 @@
                 </div>
             </div>
         </div>
-
         <div class="profile-box info-box contact md-whiteframe-1dp" layout="column">
             <header class="md-accent-bg">
                 <div class="title" translate="PROFILE.CONTACT">Contact</div>
@@ -90,7 +141,6 @@
             </div>
         </div>
     </div>
-
     <div class="about-sidebar" layout="column" flex="100" flex-gt-sm="50" flex-gt-md="35">
         <div class="profile-box friends md-whiteframe-1dp" layout="column">
             <header class="md-accent-bg" layout="row" layout-align="space-between center">
@@ -107,7 +157,6 @@
                 </div>
             </div>
         </div>
-
         <div class="profile-box groups md-whiteframe-1dp" layout="column">
             <header class="md-accent-bg" layout="row" layout-align="space-between center">
                 <div class="title" translate="PROFILE.JOINED_GROUPS">Joined Groups</div>
@@ -117,26 +166,21 @@
                     <span translate="PROFILE.MORE">More</span>
                 </div>
             </header>
-
             <div class="content">
-                <div class="group" ng-repeat="group in vm.about.groups" layout="row"
-                     layout-align="space-between center">
+                <div class="group" ng-repeat="group in vm.about.groups" layout="row" layout-align="space-between center">
                     <div layout="row" layout-align="start center">
-                        <img ng-src="{{group.logo}}" class="logo" alt="{{group.name}}"/>
-
+                        <img ng-src="{{group.logo}}" class="logo" alt="{{group.name}}" />
                         <div>
                             <div class="name">{{group.name}}</div>
                             <div class="category">{{group.category}}</div>
                             <div class="members">{{group.members}} people</div>
                         </div>
                     </div>
-                    <md-button class="md-icon-button" aria-label="more" translate
-                               translate-attr-aria-label="PROFILE.MORE">
+                    <md-button class="md-icon-button" aria-label="more" translate translate-attr-aria-label="PROFILE.MORE">
                         <md-icon md-font-icon="icon-dots-vertical"></md-icon>
                     </md-button>
                 </div>
             </div>
         </div>
     </div>
-
 </div>
